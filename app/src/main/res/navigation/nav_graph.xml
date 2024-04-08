@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.musicapp.ui.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_singerDetailFragment"
+            app:destination="@id/singerDetailFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_playActivity"
+            app:destination="@id/playActivity" />
+        <action
+            android:id="@+id/action_homeFragment_to_categoryFragment"
+            app:destination="@id/categoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/singerDetailFragment"
+        android:name="com.example.musicapp.ui.SingerDetailFragment"
+        android:label="fragment_singer_detail"
+        tools:layout="@layout/fragment_singer_detail" >
+        <action
+            android:id="@+id/action_singerDetailFragment_to_playActivity"
+            app:destination="@id/playActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/playActivity"
+        android:name="com.example.musicapp.ui.PlayActivity"
+        android:label="activity_play"
+        tools:layout="@layout/activity_play" />
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.example.musicapp.ui.CategoryFragment"
+        android:label="fragment_category"
+        tools:layout="@layout/fragment_category" >
+        <action
+            android:id="@+id/action_categoryFragment_to_playActivity"
+            app:destination="@id/playActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/exploreFragment"
+        android:name="com.example.musicapp.ui.ExploreFragment"
+        android:label="fragment_explore"
+        tools:layout="@layout/fragment_explore" >
+        <action
+            android:id="@+id/action_exploreFragment_to_playActivity"
+            app:destination="@id/playActivity" />
+        <action
+            android:id="@+id/action_exploreFragment_to_categoryFragment"
+            app:destination="@id/categoryFragment" />
+        <action
+            android:id="@+id/action_exploreFragment_to_singerDetailFragment"
+            app:destination="@id/singerDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/allCategoryFragment"
+        android:name="com.example.musicapp.ui.AllCategoryFragment"
+        android:label="fragment_all_category"
+        tools:layout="@layout/fragment_all_category" >
+        <action
+            android:id="@+id/action_allCategoryFragment_to_categoryFragment"
+            app:destination="@id/categoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/allSongFragment"
+        android:name="com.example.musicapp.ui.AllSongFragment"
+        android:label="fragment_all_song"
+        tools:layout="@layout/fragment_all_song" >
+        <action
+            android:id="@+id/action_allSongFragment_to_playActivity2"
+            app:destination="@id/playActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/allSingerFragment"
+        android:name="com.example.musicapp.ui.AllSingerFragment"
+        android:label="fragment_all_singer"
+        tools:layout="@layout/fragment_all_singer" >
+        <action
+            android:id="@+id/action_allSingerFragment_to_singerDetailFragment"
+            app:destination="@id/singerDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/libraryFragment"
+        android:name="com.example.musicapp.ui.LibraryFragment"
+        android:label="fragment_library"
+        tools:layout="@layout/fragment_library" >
+        <action
+            android:id="@+id/action_libraryFragment_to_allSongFragment"
+            app:destination="@id/allSongFragment" />
+        <action
+            android:id="@+id/action_libraryFragment_to_allCategoryFragment"
+            app:destination="@id/allCategoryFragment" />
+        <action
+            android:id="@+id/action_libraryFragment_to_allSingerFragment"
+            app:destination="@id/allSingerFragment" />
+    </fragment>
+</navigation>
